@@ -42,7 +42,7 @@ hbs.registerHelper('screamIt', (text) => {
 app.get('/', (req, res) => {
     res.render('home.hbs', {
         pageTitle: 'Home Page',
-        welcomeMessage: 'Welcome to local host homepage',
+        welcomeMessage: 'Welcome to local host homepage'
     });
 });
 
@@ -50,6 +50,14 @@ app.get('/', (req, res) => {
 app.get('/about', (req, res) => {
     res.render('about.hbs', {
         pageTitle: 'About Page',
+    });
+});
+
+// Response to localhost:3000/project request
+app.get('/project', (req, res) => {
+    res.render('project.hbs', {
+        pageTitle: 'Portfolio',
+        welcomeMessage: 'Welcome to my Portfolio'
     });
 });
 
